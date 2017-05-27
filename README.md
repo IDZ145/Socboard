@@ -17,8 +17,10 @@ Extensions:
 Frontend - Weilon:
 * Display and format stuff using API calls to backend
 * Make it look good
+
 Backend - Inura: 
 * Get data from various sources and process it
 * Create set of API endpoints that frontend can call upon
+
 Raspberry Pi:
 * Display Socboard to Socs Office TV
