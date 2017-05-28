@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+.card-socboard {
+    /*width: 80%;*/
+
+}
+
+body {
+    background-color: #ddd;
+}
+
+
+.container-socboard {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
