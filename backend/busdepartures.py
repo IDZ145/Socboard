@@ -19,7 +19,7 @@ Some bus stops near UNSW:
 
 api_endpoint = "https://api.transport.nsw.gov.au/v1/tp/"
 apikey_file_location = "./apikey"
-highstreet_bus_stop = '203116'
+highstreet_bus_stop = '203115'
 local_timezone = tz.tzlocal()
 
 def getApiKey(filename="./apikey"):
@@ -101,6 +101,7 @@ def main(args):
         print ("No departures available")
         sys.exit()
 
+    #print (json.dumps(departures, indent=4))
     for departure in departures:
 
         # parse planned and estimated departure times

@@ -4,6 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { TimetableService } from './timetable.service';
+import { Departure } from './departure';
 
 import {
     MdToolbarModule,
@@ -12,7 +14,7 @@ import {
     MdCardModule } from '@angular/material';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -21,9 +23,11 @@ import {
     MdToolbarModule,
     MdCheckboxModule,
     MdGridListModule,
-    MdCardModule
+    MdCardModule,
   ],
-  providers: [],
+  providers: [
+      TimetableService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
