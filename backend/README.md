@@ -1,5 +1,5 @@
 # Socboard Backend
-Last updated by Weilon Ying on 3rd June 2017
+Last updated by Weilon Ying on 11th June 2017
 
 ## busdepartures.py
 ### Dependencies
@@ -9,4 +9,6 @@ Last updated by Weilon Ying on 3rd June 2017
 * A working TfNSW ([Transport for NSW](https://opendata.transport.nsw.gov.au/)) API Key
 
 ### Description
-Gets departure times from a specific bus stop. Defaults to bus stop 203116 (UNSW High Street near Gate 9) if none provided. Uses TfNSW REST API.
+Handles everything handled on the server-side. Currently serves test data. Functions include:
+* Gets departure times from a specific bus stop. Uses TfNSW REST API.
+* Handling AJAX requests from frontend.
