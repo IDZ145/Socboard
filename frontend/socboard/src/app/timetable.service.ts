@@ -7,15 +7,11 @@ import { Departure }  from './departure';
 export class TimetableService {
     constructor (private http: Http) { }
 
-    private apiUrl: string = "http://localhost:5000";
+    private apiUrl: string = "http://localhost:5000/";
 
-    getTimes(): Observable<Departure[]> {
-        return this.http.get(this.apiUrl + "getbuseshighstreet")
-            .map((res: Response) => this.jsonToDeparture(res.json()))
+    getTimetableHighSt(): Observable<JSON> {
+        return this.http.get(this.apiUrl + "getbuseshighst")
+            .map((res: Response) => res.json())
             .catch ((error: any) => Observable.throw(error.json().error || 'Server error'));
-    }
-
-    jsonToDeparture(json: JSON): Departure[] {
-        return null;
     }
 }

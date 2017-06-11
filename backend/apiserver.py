@@ -11,7 +11,7 @@ def index():
 
 class GetBusesHighSt(Resource):
     def get(self):
-        return bus_test_data.getHighStTestData()
+        return bus_test_data.getHighStTestData(), 200, {"Access-Control-Allow-Origin": "http://localhost:4200"}
 
 class GetBusesAnzacPde(Resource):
     def get(self):

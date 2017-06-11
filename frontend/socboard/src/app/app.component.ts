@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TimetableService } from './timetable.service'
 
 @Component({
@@ -6,11 +6,26 @@ import { TimetableService } from './timetable.service'
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
     constructor (private timetableService: TimetableService) { }
-    title = 'Socboard';
+    title: string = 'Socboard';
+    timetableHighSt: JSON = null;
 
-    getTimetable() {
-        return this.timetableService.getTimes();
+    ngOnInit(): void {
+        this.getTimetableHighSt();
+    }
+
+    getTimetableHighSt(): void {
+        this.timetableService.getTimetableHighSt().subscribe(res => {
+            this.timetableHighSt = res;
+            console.log("Response: " + this.timetableHighSt);
+        });
+    }
+
+    timetableHighStToHtml(): string {
+        if (this.timetableHighSt != null) {
+            return JSON.stringify(this.timetableHighSt);
+        }
+        return "";
     }
 }
